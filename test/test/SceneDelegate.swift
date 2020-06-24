@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  test
+//  Map
 //
-//  Created by 김수환 on 2020/06/23.
-//  Copyright © 2020 김수환. All rights reserved.
+//  Created by bglee on 2019/09/20.
+//  Copyright © 2019 bglee. All rights reserved.
 //
 
 import UIKit
