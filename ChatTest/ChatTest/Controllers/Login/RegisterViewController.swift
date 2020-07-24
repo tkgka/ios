@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class RegisterViewController: UIViewController {
     
@@ -20,7 +22,7 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "person")
+        imageView.image = UIImage(systemName: "person.circle")
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.layer.masksToBounds = true
@@ -111,7 +113,7 @@ class RegisterViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(didTapRegister))
         
         registerButton.addTarget(self, action: #selector(registerButtonTapped), for: .touchUpInside)
         
@@ -184,9 +186,36 @@ class RegisterViewController: UIViewController {
                 alertUserLoginError()
                 return
         }
+        // firebase Log in
+        
+        DatabaseManager.shared.userExists(with: email, completion: {[weak self] exists in
+            guard let StrongSelf = self else{
+                return
+            }
+            guard !exists else {
+                //user already exists
+                self?.alertUserLoginError(message: "Looks like a user account for that email is alreay exists")
+                return
+            }
+            FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: {authResult, error in
+                     
+                     
+                     guard authResult != nil ,error == nil else{
+                         print("error creating user")
+                         return
+                     }
+                     DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstname, lastName: lastname, emailAddress: email))
+                     
+                     StrongSelf.navigationController?.dismiss(animated: true, completion: nil)
+                 })
+                 
+                 
+        })
+        
+     
     }
-    func alertUserLoginError() {
-        let alert = UIAlertController(title: "woops", message: "please enter all information", preferredStyle: .alert)
+    func alertUserLoginError(message: String = "please enter all information to create a new account") {
+        let alert = UIAlertController(title: "woops", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
