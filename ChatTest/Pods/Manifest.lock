@@ -86,12 +86,14 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
+  - SideMenu (6.4.9)
 
 DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - SideMenu
 
 SPEC REPOS:
   trunk:
@@ -111,6 +113,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SideMenu
 
 SPEC CHECKSUMS:
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
@@ -129,7 +132,8 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
+  SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
 
-PODFILE CHECKSUM: 721844c45eaf3f7b0c8e61c737c592b194568547
+PODFILE CHECKSUM: e42c62451ed25b7cbb1a8512ae92798769c7712b
 
 COCOAPODS: 1.9.3

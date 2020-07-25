@@ -27,6 +27,7 @@ class ConversationsViewController: UIViewController {
     }
     private func validateAuth(){
 //        let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
+     
         
         if FirebaseAuth.Auth.auth().currentUser == nil{
             let vc = LoginViewController()
@@ -35,7 +36,5 @@ class ConversationsViewController: UIViewController {
             present(nav,animated: false)
         }
     }
-
-
 }
 
