@@ -8,8 +8,19 @@ target 'ChatTest' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Firebase/Storage'
 pod 'SideMenu'
 
 # Facebook
 pod 'FBSDKLoginKit'
+
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'SDWebImage'
+
+# Google Sign IN
+
+pod 'GoogleSignIn'
+
 end

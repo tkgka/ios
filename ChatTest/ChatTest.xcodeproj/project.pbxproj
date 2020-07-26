@@ -21,6 +21,8 @@
 		F90C5CE624C82DE400516A22 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C5CE524C82DE400516A22 /* VideoPlayerViewController.swift */; };
 		F90C5CE824C82E0300516A22 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C5CE724C82E0300516A22 /* NewConversationViewController.swift */; };
 		F90C5CEA24C82E1900516A22 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90C5CE924C82E1900516A22 /* ProfileViewController.swift */; };
+		F92B469E24CD54D8002CF88F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B469D24CD54D8002CF88F /* ChatViewController.swift */; };
+		F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B46A324CD7358002CF88F /* StorageManager.swift */; };
 		F932D66124C96F5B007982D6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932D66024C96F5B007982D6 /* Extensions.swift */; };
 		F988A35924CAD1CE00540009 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35824CAD1CE00540009 /* DatabaseManager.swift */; };
 		F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35C24CB37FF00540009 /* TestViewController.swift */; };
@@ -46,6 +48,8 @@
 		F90C5CE524C82DE400516A22 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		F90C5CE724C82E0300516A22 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		F90C5CE924C82E1900516A22 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F92B469D24CD54D8002CF88F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F92B46A324CD7358002CF88F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		F932D66024C96F5B007982D6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F988A35824CAD1CE00540009 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F988A35C24CB37FF00540009 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 				F90C5CE524C82DE400516A22 /* VideoPlayerViewController.swift */,
 				F90C5CE724C82E0300516A22 /* NewConversationViewController.swift */,
 				F90C5CE924C82E1900516A22 /* ProfileViewController.swift */,
+				F92B469D24CD54D8002CF88F /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				F90C5CC724C829F100516A22 /* SceneDelegate.swift */,
 				F932D66024C96F5B007982D6 /* Extensions.swift */,
 				F988A35824CAD1CE00540009 /* DatabaseManager.swift */,
+				F92B46A324CD7358002CF88F /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				F90C5CBF24C829F100516A22 /* Frameworks */,
 				F90C5CC024C829F100516A22 /* Resources */,
 				FD76950DEF57A0FF141B9055 /* [CP] Embed Pods Frameworks */,
+				5CA2918B15EDD71A717545BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,6 +265,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5CA2918B15EDD71A717545BB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatTest/Pods-ChatTest-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatTest/Pods-ChatTest-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatTest/Pods-ChatTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A71BB635703AD56D08FD5012 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,7 +338,9 @@
 				F932D66124C96F5B007982D6 /* Extensions.swift in Sources */,
 				F90C5CC624C829F100516A22 /* AppDelegate.swift in Sources */,
 				F90C5CEA24C82E1900516A22 /* ProfileViewController.swift in Sources */,
+				F92B469E24CD54D8002CF88F /* ChatViewController.swift in Sources */,
 				F90C5CC824C829F100516A22 /* SceneDelegate.swift in Sources */,
+				F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */,
 				F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */,
 				F90C5CE424C82DCD00516A22 /* PhotoViewerViewController.swift in Sources */,
 			);

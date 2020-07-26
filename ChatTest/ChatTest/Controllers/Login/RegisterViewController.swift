@@ -8,9 +8,11 @@
 
 import UIKit
 import FirebaseAuth
-
+import JGProgressHUD
 
 class RegisterViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -188,10 +190,17 @@ class RegisterViewController: UIViewController {
         }
         // firebase Log in
         
+        spinner.show(in: view)
+        
         DatabaseManager.shared.userExists(with: email, completion: {[weak self] exists in
             guard let StrongSelf = self else{
                 return
             }
+            
+            DispatchQueue.main.async {
+                StrongSelf.spinner.dismiss()
+            }
+            
             guard !exists else {
                 //user already exists
                 self?.alertUserLoginError(message: "Looks like a user account for that email is alreay exists")
@@ -204,7 +213,25 @@ class RegisterViewController: UIViewController {
                          print("error creating user")
                          return
                      }
-                     DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstname, lastName: lastname, emailAddress: email))
+                let chatUser = ChatAppUser(firstName: firstname, lastName: lastname, emailAddress: email)
+                DatabaseManager.shared.insertUser(with: chatUser, completion: {success in
+                    if success {
+                        //upload Image
+                        guard let image = StrongSelf.imageView.image, let data = image.pngData() else {
+                            return
+                        }
+                        let fileName = chatUser.profilePictureFileName
+                        StorageManager.shared.uploadProfilePicture(with: data, fileName: fileName, completion: {result in
+                            switch result{
+                            case .success(let downloadUrl):
+                                UserDefaults.standard.set(downloadUrl, forKey: "profile_picture_url")
+                                print(downloadUrl)
+                            case .failure(let error):
+                                print("Storage manager error: \(error)")
+                            }
+                        })
+                    }
+                })
                      
                      StrongSelf.navigationController?.dismiss(animated: true, completion: nil)
                  })

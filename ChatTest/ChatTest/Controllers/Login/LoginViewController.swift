@@ -9,7 +9,12 @@
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
+import JGProgressHUD
+import GoogleSignIn
+
 class LoginViewController: UIViewController {
+    
+    private let spinner = JGProgressHUD(style: .dark)
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -76,9 +81,22 @@ class LoginViewController: UIViewController {
         button.permissions = ["email,public_profile"]
         return button
     }()
+    private let googleLogInButton = GIDSignInButton()
+    
+    private var loginObserver: NSObjectProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginObserver = NotificationCenter.default.addObserver(forName: .didLogInNotification, object: nil, queue: .main, using: {[weak self]_ in
+            guard let strongself = self else {
+                return
+            }
+            strongself.navigationController?.dismiss(animated: true, completion: nil)
+        })
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
         title = "Log in"
         view.backgroundColor = .white
         
@@ -100,11 +118,18 @@ class LoginViewController: UIViewController {
         scrollView.addSubview(passwordField)
         scrollView.addSubview(loginButton)
         scrollView.addSubview(FacebookloginButton)
-        
+        scrollView.addSubview(googleLogInButton)
         
         
         
     }
+    
+    deinit {
+        if let observer = loginObserver{
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.frame = view.bounds
@@ -131,8 +156,11 @@ class LoginViewController: UIViewController {
                                            width: scrollView.width-60,
                                            height: 52)
         
-        FacebookloginButton.center = scrollView.center
-        FacebookloginButton.frame.origin.y = loginButton.bottom+20
+        
+        googleLogInButton.frame = CGRect(x:30,
+                                           y: FacebookloginButton.bottom+10,
+                                           width: scrollView.width-60,
+                                           height: 52)
         
     }
     
@@ -146,11 +174,22 @@ class LoginViewController: UIViewController {
                 alertUserLoginError()
                 return
         }
+        
+        spinner.show(in: view)
+        
         //firebase login
         FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: {[weak self] authResult, error in
+            
             guard let StrongSelf = self else{
                 return
             }
+            
+            //스피너 제거
+            DispatchQueue.main.async {
+                StrongSelf.spinner.dismiss()
+            }
+            
+            
             guard let result = authResult ,error == nil else{
                 print("Fail to log in : \(email)")
                 return
@@ -227,7 +266,13 @@ extension LoginViewController: LoginButtonDelegate{
             
             DatabaseManager.shared.userExists(with: email, completion: {exists in
                 if !exists{
-                    DatabaseManager.shared.insertUser(with: ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email))
+                    let chatUser = ChatAppUser(firstName: firstName, lastName: lastName, emailAddress: email)
+                    DatabaseManager.shared.insertUser(with: chatUser, completion: {success in
+                        if success {
+                            // upload image
+                            
+                        }
+                    })
                 }
             })
             
