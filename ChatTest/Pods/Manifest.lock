@@ -4,6 +4,7 @@ PODS:
     - AppAuth/ExternalUserAgent (= 1.4.0)
   - AppAuth/Core (1.4.0)
   - AppAuth/ExternalUserAgent (1.4.0)
+  - CardSlider (0.1.0)
   - FBSDKCoreKit (7.1.1):
     - FBSDKCoreKit/Basics (= 7.1.1)
     - FBSDKCoreKit/Core (= 7.1.1)
@@ -123,8 +124,12 @@ PODS:
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
   - SideMenu (6.4.9)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - CardSlider
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -136,10 +141,12 @@ DEPENDENCIES:
   - RealmSwift
   - SDWebImage
   - SideMenu
+  - Socket.IO-Client-Swift
 
 SPEC REPOS:
   trunk:
     - AppAuth
+    - CardSlider
     - FBSDKCoreKit
     - FBSDKLoginKit
     - Firebase
@@ -166,9 +173,12 @@ SPEC REPOS:
     - RealmSwift
     - SDWebImage
     - SideMenu
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
+  CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   FBSDKLoginKit: 1a61d79e2b25e2fc0d03dccab1e34b38bbdf2546
   Firebase: ed042590caa0029392257529a8003c25ee82bc18
@@ -195,7 +205,9 @@ SPEC CHECKSUMS:
   RealmSwift: 42ec6cec3170aeeda407f797f07268a7d055ebc7
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   SideMenu: 8ef57a3cfc024a2d3fc1c036c7fe98537baec9e0
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 822fcc2957c11f1cc9e6a43e1ec51973269d2480
+PODFILE CHECKSUM: 472eecb399cf4c8b7fa5522d8d1f623381b8920f
 
 COCOAPODS: 1.9.3

@@ -13,11 +13,9 @@ protocol menuControllerDelegate {
     func DidSelectMenuItem(name: String)
     
 }
-
-
-
-
 class menuController:UITableViewController{
+    
+    
     public var delegate:menuControllerDelegate?
     
     private let MenuItem: [String]

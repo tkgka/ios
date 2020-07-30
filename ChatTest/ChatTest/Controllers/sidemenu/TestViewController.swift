@@ -9,11 +9,13 @@
 import UIKit
 import SideMenu
 import FirebaseAuth
+
 class TestViewController:UIViewController,menuControllerDelegate{
     private var SideMenu: SideMenuNavigationController?
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         let menu = menuController(with: ["home","info","setting","Logout"])
         
@@ -24,6 +26,7 @@ class TestViewController:UIViewController,menuControllerDelegate{
         SideMenu?.leftSide = true
         SideMenuManager.default.leftMenuNavigationController = SideMenu
         SideMenuManager.default.addPanGestureToPresent(toView: view)
+        
         // Do any additional setup after loading the view.
         
     }
@@ -80,6 +83,7 @@ class TestViewController:UIViewController,menuControllerDelegate{
             }
             else if name == "info"{
                 self?.view.backgroundColor = .red
+                
             }
             else if name == "setting"{
                 self?.view.backgroundColor = .green

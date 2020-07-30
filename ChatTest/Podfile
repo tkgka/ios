@@ -23,4 +23,11 @@ pod 'SDWebImage'
 
 pod 'GoogleSignIn'
 
+#socket IO
+pod 'Socket.IO-Client-Swift'
+
+#cardSlider
+
+pod 'CardSlider'
+
 end

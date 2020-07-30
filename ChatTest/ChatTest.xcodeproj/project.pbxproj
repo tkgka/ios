@@ -24,6 +24,8 @@
 		F92B469E24CD54D8002CF88F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B469D24CD54D8002CF88F /* ChatViewController.swift */; };
 		F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B46A324CD7358002CF88F /* StorageManager.swift */; };
 		F932D66124C96F5B007982D6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932D66024C96F5B007982D6 /* Extensions.swift */; };
+		F970D99024D17711000B929D /* socketIOClient_example.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F970D98E24D17710000B929D /* socketIOClient_example.xcdatamodeld */; };
+		F970D99224D17B9B000B929D /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970D99124D17B9B000B929D /* ConversationTableViewCell.swift */; };
 		F988A35924CAD1CE00540009 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35824CAD1CE00540009 /* DatabaseManager.swift */; };
 		F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35C24CB37FF00540009 /* TestViewController.swift */; };
 		F9B162D824CAC783009E8E85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */; };
@@ -51,6 +53,8 @@
 		F92B469D24CD54D8002CF88F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F92B46A324CD7358002CF88F /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		F932D66024C96F5B007982D6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F970D98F24D17710000B929D /* socketIOClient_example.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = socketIOClient_example.xcdatamodel; sourceTree = "<group>"; };
+		F970D99124D17B9B000B929D /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		F988A35824CAD1CE00540009 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F988A35C24CB37FF00540009 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				F90C5CDA24C82B9D00516A22 /* Views */,
 				F90C5CD924C82B8600516A22 /* Controllers */,
 				F90C5CD324C829F400516A22 /* Info.plist */,
+				F970D98E24D17710000B929D /* socketIOClient_example.xcdatamodeld */,
 			);
 			path = ChatTest;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			children = (
 				F90C5CDE24C82C2300516A22 /* Storyboards */,
 				F90C5CCE24C829F400516A22 /* Assets.xcassets */,
+				F970D99124D17B9B000B929D /* ConversationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,11 +340,13 @@
 				F90C5CE824C82E0300516A22 /* NewConversationViewController.swift in Sources */,
 				F90C5CCA24C829F100516A22 /* ConversationsViewController.swift in Sources */,
 				F9016B8A24CC41D400EE0B98 /* sidemenu.swift in Sources */,
+				F970D99024D17711000B929D /* socketIOClient_example.xcdatamodeld in Sources */,
 				F90C5CE624C82DE400516A22 /* VideoPlayerViewController.swift in Sources */,
 				F932D66124C96F5B007982D6 /* Extensions.swift in Sources */,
 				F90C5CC624C829F100516A22 /* AppDelegate.swift in Sources */,
 				F90C5CEA24C82E1900516A22 /* ProfileViewController.swift in Sources */,
 				F92B469E24CD54D8002CF88F /* ChatViewController.swift in Sources */,
+				F970D99224D17B9B000B929D /* ConversationTableViewCell.swift in Sources */,
 				F90C5CC824C829F100516A22 /* SceneDelegate.swift in Sources */,
 				F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */,
 				F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */,
@@ -542,6 +550,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F970D98E24D17710000B929D /* socketIOClient_example.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F970D98F24D17710000B929D /* socketIOClient_example.xcdatamodel */,
+			);
+			currentVersion = F970D98F24D17710000B929D /* socketIOClient_example.xcdatamodel */;
+			name = socketIOClient_example.xcdatamodeld;
+			path = "../../../../../Downloads/SocketIO-master/sockets(mahesh)/socketIOClient_example/socketIOClient_example/socketIOClient_example.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F90C5CBA24C829F100516A22 /* Project object */;
 }
