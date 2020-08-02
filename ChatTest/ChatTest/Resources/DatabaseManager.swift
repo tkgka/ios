@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import MessageKit
 
 final class DatabaseManager{
     
@@ -345,10 +346,26 @@ extension DatabaseManager {
                     let date = ChatViewController.dataFormatter.date(from: dateString) else {
                         return nil
                 }
+                var kind : MessageKind?
+                if type == "photo" {
+                    //photo
+                    guard let imageUrl = URL(string: content),
+                    let placeHolder = UIImage(systemName: "plus") else {
+                        return nil
+                    }
+                    let media = Media(url: imageUrl, image: nil, placeholderImage: placeHolder, size: CGSize(width: 300, height: 300))
+                    kind = .photo(media)
+                }else {
+                    kind = .text(content)
+                }
+                
+                guard let finalKind = kind else {
+                    return nil
+                }
                 
                 let Sender = sender(photoURL: "", senderId:senderEmail, displayName: name)
                 
-                return Message(sender: Sender, messageId: messageID, sentDate: date, kind: .text(content))
+                return Message(sender: Sender, messageId: messageID, sentDate: date, kind: finalKind)
             })
             
             Completion(.success(messages))
@@ -384,7 +401,11 @@ extension DatabaseManager {
                 message = messageText
             case .attributedText(_):
                 break
-            case .photo(_):
+            case .photo(let mediaItem):
+                if let targetUrlString = mediaItem.url?.absoluteString {
+                    message = targetUrlString
+                }
+                
                 break
             case .video(_):
                 break

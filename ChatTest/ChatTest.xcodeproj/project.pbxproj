@@ -29,6 +29,9 @@
 		F988A35924CAD1CE00540009 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35824CAD1CE00540009 /* DatabaseManager.swift */; };
 		F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35C24CB37FF00540009 /* TestViewController.swift */; };
 		F9B162D824CAC783009E8E85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */; };
+		F9E681C024D5D435001544B4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E681BF24D5D435001544B4 /* SettingsViewController.swift */; };
+		F9E681C224D5D440001544B4 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E681C124D5D440001544B4 /* InfoViewController.swift */; };
+		F9E681C424D5D464001544B4 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E681C324D5D464001544B4 /* SideMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		F988A35824CAD1CE00540009 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F988A35C24CB37FF00540009 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F9E681BF24D5D435001544B4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "../../../../../../../Downloads/Swifty-Side-Menu-master/MySideMenu/SettingsViewController.swift"; sourceTree = "<group>"; };
+		F9E681C124D5D440001544B4 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = "../../../../../../../Downloads/Swifty-Side-Menu-master/MySideMenu/InfoViewController.swift"; sourceTree = "<group>"; };
+		F9E681C324D5D464001544B4 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = "../../../../../../../Downloads/Swifty-Side-Menu-master/MySideMenu/SideMenu.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 		F9016B8B24CC41DC00EE0B98 /* sidemenu */ = {
 			isa = PBXGroup;
 			children = (
+				F9E681C324D5D464001544B4 /* SideMenu.swift */,
+				F9E681C124D5D440001544B4 /* InfoViewController.swift */,
+				F9E681BF24D5D435001544B4 /* SettingsViewController.swift */,
 				F988A35C24CB37FF00540009 /* TestViewController.swift */,
 				F9016B8924CC41D400EE0B98 /* sidemenu.swift */,
 			);
@@ -341,6 +350,7 @@
 				F90C5CCA24C829F100516A22 /* ConversationsViewController.swift in Sources */,
 				F9016B8A24CC41D400EE0B98 /* sidemenu.swift in Sources */,
 				F970D99024D17711000B929D /* socketIOClient_example.xcdatamodeld in Sources */,
+				F9E681C424D5D464001544B4 /* SideMenu.swift in Sources */,
 				F90C5CE624C82DE400516A22 /* VideoPlayerViewController.swift in Sources */,
 				F932D66124C96F5B007982D6 /* Extensions.swift in Sources */,
 				F90C5CC624C829F100516A22 /* AppDelegate.swift in Sources */,
@@ -351,6 +361,8 @@
 				F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */,
 				F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */,
 				F90C5CE424C82DCD00516A22 /* PhotoViewerViewController.swift in Sources */,
+				F9E681C024D5D435001544B4 /* SettingsViewController.swift in Sources */,
+				F9E681C224D5D440001544B4 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

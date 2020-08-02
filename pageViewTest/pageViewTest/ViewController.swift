@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         super.viewDidLoad()
         
         let pages: [String] = [
-            "Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. Chapter 1. ","chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. chapter 2. ","chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. chapter 4. "
+            "1","2","3","4"
         ]
         for text in pages {
             let vc = textViewController(with: text)
