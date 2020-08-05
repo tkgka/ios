@@ -16,13 +16,15 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let pages: [String] = [
-            "1","2","3","4"
-        ]
-        for text in pages {
-            let vc = textViewController(with: text)
-            myControllers.append(vc)
-        }
+        
+        fetchPostdata { (posts) in
+                  
+                  for post in posts {
+                    let vc = textViewController(with: post.title)
+                    self.myControllers.append(vc)
+                  }
+              }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -64,6 +66,29 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         let after = index + 1
         return myControllers[after]
     }
+ 
+    
+    func fetchPostdata(completionHandler: @escaping ([Post]) -> Void){
+           
+           let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+           
+           let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+               
+               guard let data = data else { return }
+               
+               do {
+                   
+                   let postsData = try JSONDecoder().decode([Post].self, from: data)
+                   
+                   completionHandler(postsData)
+                   
+               }catch{
+                   let error = error
+                   print("\(error.localizedDescription)")
+               }
+               
+           }.resume()
+       }
     
 }
 

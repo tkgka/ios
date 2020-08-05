@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--instagram-->
+        <!--ㅇㅅㅇ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instaTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="instagram" id="FSN-Us-xT4"/>
+                    <navigationItem key="navigationItem" title="ㅇㅅㅇ" id="FSN-Us-xT4"/>
                     <connections>
                         <outlet property="table" destination="oN0-ab-1qN" id="1yc-u7-4nC"/>
                     </connections>

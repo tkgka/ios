@@ -14,6 +14,7 @@
 		F9256B0224D5A6E700C33638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9256B0124D5A6E700C33638 /* Assets.xcassets */; };
 		F9256B0524D5A6E700C33638 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9256B0324D5A6E700C33638 /* LaunchScreen.storyboard */; };
 		F9256B0D24D5AB3400C33638 /* textViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9256B0C24D5AB3400C33638 /* textViewController.swift */; };
+		F99A6CC424DABA7900846A1B /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A6CC324DABA7900846A1B /* post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F9256B0424D5A6E700C33638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9256B0624D5A6E700C33638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9256B0C24D5AB3400C33638 /* textViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textViewController.swift; sourceTree = "<group>"; };
+		F99A6CC324DABA7900846A1B /* post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = post.swift; path = "../../loadJson Test/loadJson Test/post.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F9256B0324D5A6E700C33638 /* LaunchScreen.storyboard */,
 				F9256B0624D5A6E700C33638 /* Info.plist */,
 				F9256B0C24D5AB3400C33638 /* textViewController.swift */,
+				F99A6CC324DABA7900846A1B /* post.swift */,
 			);
 			path = pageViewTest;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9256AFD24D5A6E600C33638 /* ViewController.swift in Sources */,
+				F99A6CC424DABA7900846A1B /* post.swift in Sources */,
 				F9256AF924D5A6E600C33638 /* AppDelegate.swift in Sources */,
 				F9256AFB24D5A6E600C33638 /* SceneDelegate.swift in Sources */,
 				F9256B0D24D5AB3400C33638 /* textViewController.swift in Sources */,
