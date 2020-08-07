@@ -72,7 +72,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
            
            let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
            
-           let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let task:Void = URLSession.shared.dataTask(with: url) { (data, response, error) in
                
                guard let data = data else { return }
                
