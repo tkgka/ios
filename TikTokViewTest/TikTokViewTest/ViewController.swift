@@ -17,12 +17,29 @@ struct VideoModel {
 }
 
 class ViewController: UIViewController {
-
+    
     private var collectionView: UICollectionView?
     private var data = [VideoModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchPostdata { (posts) in
+            
+            for post in posts {
+                print("\(post.title!)\n")
+                let model = VideoModel(caption: post.title,
+                                       username: "@tkgka",
+                                       audioTrackName: "test_song",
+                                       VideoFileName: "video",
+                                       VideoFileFormat: "mov")
+                
+                self.data.append(model)
+                
+            }
+        }
+        
+        
         
         for _ in 0..<10 {
             let model = VideoModel(caption: "this is a coll car",
@@ -30,8 +47,8 @@ class ViewController: UIViewController {
                                    audioTrackName: "gucci gang",
                                    VideoFileName: "video",
                                    VideoFileFormat: "mov")
-            
-            data.append(model)
+
+            self.data.append(model)
         }
         
         let layout = UICollectionViewFlowLayout()
@@ -81,6 +98,41 @@ extension ViewController: VideoCollectionViewCellDelegate {
     
     func didTapCommentButton(with model: VideoModel) {
         print("commentbuttonTapped")
+    }
+    
+    
+    //patch data from internet
+    func fetchPostdata(completionHandler: @escaping ([Post]) -> Void){
+        
+        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data else { return }
+            
+            do {
+                
+                let postsData = try JSONDecoder().decode([Post].self, from: data)
+                
+                completionHandler(postsData)
+                
+            }catch{
+                let error = error
+                print("\(error.localizedDescription)")
+            }
+            
+        }.resume()
+    }
+    
+    
+    
+    
+    //datastructure
+    struct Post: Codable {
+        var userId: Int!
+        var id: Int!
+        var title: String!
+        var body: String!
     }
     
     
