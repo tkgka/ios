@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="570" height="841"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-Sf-vkZ" userLabel="topContaionerView">
-                        <rect key="frame" x="20" y="11" width="931" height="80"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-Sf-vkZ" userLabel="topContaionerView">
+                        <rect key="frame" x="20" y="11" width="275" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@tkgka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-ie-VgQ">
                                 <rect key="frame" x="90" y="10" width="57" height="60"/>
@@ -58,6 +58,13 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="399" id="xgM-Ih-d90"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fs0-lP-dbs">
+                        <rect key="frame" x="28" y="565" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="pkx-Sf-vkZ" secondAttribute="trailing" id="D1n-g6-VDG"/>
@@ -71,11 +78,12 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="HeartLable" destination="fs0-lP-dbs" id="bJx-Wm-1xh"/>
                 <outlet property="postimageView" destination="X91-c4-Zm6" id="8Vs-Xv-nAR"/>
                 <outlet property="userimageView" destination="Mzk-dA-cdq" id="WHe-ph-XtI"/>
                 <outlet property="usernameLable" destination="fnY-ie-VgQ" id="JZY-SZ-Lmk"/>
             </connections>
-            <point key="canvasLocation" x="-123" y="435"/>
+            <point key="canvasLocation" x="-123.18840579710145" y="434.93303571428572"/>
         </tableViewCell>
     </objects>
     <resources>

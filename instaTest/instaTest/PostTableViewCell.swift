@@ -13,6 +13,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet var userimageView: UIImageView!
         @IBOutlet var postimageView: UIImageView!
         @IBOutlet var usernameLable: UILabel!
+        @IBOutlet var HeartLable: UILabel!
     
         
         static let identifier = "postTableViewCell"
@@ -32,6 +33,7 @@ class PostTableViewCell: UITableViewCell {
         func configure(with model: InstagramPost){
 
             self.usernameLable.text = model.username
+            self.HeartLable.text = model.numberOfLikes
             self.userimageView.image = UIImage(named: model.userImageName)
             self.postimageView.image = UIImage(named: model.postImageName)
         }

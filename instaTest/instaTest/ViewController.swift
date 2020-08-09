@@ -37,7 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func append(){
         fetchPostdata { (posts) in
             for post in posts {
-                self.models.append(InstagramPost(numberOfLikes: post.id, username: post.title, userImageName: "head", postImageName: "post_1"))
+                self.models.append(InstagramPost(numberOfLikes: String(post.id), username: post.title, userImageName: "head", postImageName: "post_1"))
                 
             }
         }
@@ -50,7 +50,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         table.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
-        view.addSubview(table)
+
         fetchData()
         table.refreshControl = UIRefreshControl()
         table.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
@@ -89,7 +89,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             guard let final = result else {
                 return
             }
-            strongself.models.append(InstagramPost(numberOfLikes: 200, username: final.results.sunrise, userImageName: "head", postImageName: "post_1"))
+            strongself.models.append(InstagramPost(numberOfLikes: "200", username: final.results.sunrise, userImageName: "head", postImageName: "post_1"))
             //              strongself.models.append("Sunrise: \(final.results.sunrise)")
             
             
@@ -150,7 +150,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 }
 
 struct InstagramPost {
-    let numberOfLikes : Int
+    let numberOfLikes : String
     let username: String
     let userImageName: String
     let postImageName: String
