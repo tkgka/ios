@@ -12,11 +12,11 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postTableViewCell" rowHeight="841" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="instaTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="570" height="841"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="570" height="841"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-Sf-vkZ" userLabel="topContaionerView">
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-Sf-vkZ" userLabel="topContaionerView">
                         <rect key="frame" x="20" y="11" width="275" height="80"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@tkgka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnY-ie-VgQ">
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="bottom" secondItem="fnY-ie-VgQ" secondAttribute="bottom" constant="10" id="zCT-th-CMv"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="post_1" translatesAutoresizingMaskIntoConstraints="NO" id="X91-c4-Zm6">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X91-c4-Zm6">
                         <rect key="frame" x="-180" y="99" width="931" height="465"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="465" id="KGh-WZ-Iqo"/>
@@ -88,6 +88,5 @@
     </objects>
     <resources>
         <image name="head" width="886" height="886"/>
-        <image name="post_1" width="931" height="843"/>
     </resources>
 </document>

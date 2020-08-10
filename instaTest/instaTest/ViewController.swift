@@ -37,8 +37,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func append(){
         fetchPostdata { (posts) in
             for post in posts {
-                self.models.append(InstagramPost(numberOfLikes: String(post.id), username: post.title, userImageName: "head", postImageName: "post_1"))
-                
+                self.models.append(InstagramPost(numberOfLikes: String(post.id), username: post.title, userImageName: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Pomayrols_nature.JPEG", postImageName: "http://localhost:3000/images/1596442350001f4b63c2725aecaffbd2294b63b61cc5d.jpeg"))
             }
         }
     }

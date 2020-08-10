@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F90A92F624E079FE0094FD0D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90A92F524E079FE0094FD0D /* Extension.swift */; };
 		F91842C624D6FD1F00572113 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91842C424D6FD1F00572113 /* PostTableViewCell.swift */; };
 		F91842C724D6FD1F00572113 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91842C524D6FD1F00572113 /* PostTableViewCell.xib */; };
 		F99A6CC224DAB2C000846A1B /* post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99A6CC124DAB2C000846A1B /* post.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F90A92F524E079FE0094FD0D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = ../../loadImageFromServerTest/loadImageFromServerTest/Extension.swift; sourceTree = "<group>"; };
 		F91842C424D6FD1F00572113 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F91842C524D6FD1F00572113 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		F99A6CC124DAB2C000846A1B /* post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = post.swift; path = "../../loadJson Test/loadJson Test/post.swift"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				F91842C424D6FD1F00572113 /* PostTableViewCell.swift */,
 				F91842C524D6FD1F00572113 /* PostTableViewCell.xib */,
 				F99A6CC124DAB2C000846A1B /* post.swift */,
+				F90A92F524E079FE0094FD0D /* Extension.swift */,
 			);
 			path = instaTest;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				F9BC7EE424D6F2EE0031AED6 /* ViewController.swift in Sources */,
 				F99A6CC224DAB2C000846A1B /* post.swift in Sources */,
 				F9BC7EE024D6F2EE0031AED6 /* AppDelegate.swift in Sources */,
+				F90A92F624E079FE0094FD0D /* Extension.swift in Sources */,
 				F9BC7EE224D6F2EE0031AED6 /* SceneDelegate.swift in Sources */,
 				F91842C624D6FD1F00572113 /* PostTableViewCell.swift in Sources */,
 			);

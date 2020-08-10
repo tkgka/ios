@@ -34,8 +34,10 @@ class PostTableViewCell: UITableViewCell {
 
             self.usernameLable.text = model.username
             self.HeartLable.text = model.numberOfLikes
-            self.userimageView.image = UIImage(named: model.userImageName)
-            self.postimageView.image = UIImage(named: model.postImageName)
+//            self.userimageView.image = UIImage(named: model.userImageName)
+            self.userimageView.load(urlString: model.userImageName)
+            self.postimageView.load(urlString: model.postImageName)
+//            self.postimageView.image = UIImage(named: model.postImageName)
         }
 
     }
