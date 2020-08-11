@@ -18,6 +18,7 @@ class ViewController: UIViewController {
             
             for post in posts {
                 print("\(post.title!)\n")
+                print("\(post.body!)\n")
             }
         }
     }
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     //patch data from internet
     func fetchPostdata(completionHandler: @escaping ([Post]) -> Void){
         
-        let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+        let url = URL(string: "http://localhost:3000")!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             

@@ -88,7 +88,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             guard let final = result else {
                 return
             }
-            strongself.models.append(InstagramPost(numberOfLikes: "200", username: final.results.sunrise, userImageName: "head", postImageName: "post_1"))
+            strongself.models.append(InstagramPost(numberOfLikes: "200", username: final.results.sunrise, userImageName: "http://localhost:3000/images/1597022446144aba4c12c0307ac56aedf5e7b2dadf69b.jpeg", postImageName: "post_1"))
             //              strongself.models.append("Sunrise: \(final.results.sunrise)")
             
             
