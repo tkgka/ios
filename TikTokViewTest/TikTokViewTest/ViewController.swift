@@ -21,26 +21,29 @@ class ViewController: UIViewController {
     private var collectionView: UICollectionView?
     private var data = [VideoModel]()
     
+    private func append() {
+        fetchPostdata { (posts) in
+                   
+                   for post in posts {
+                       print("\(post.title!)\n")
+                       let model = VideoModel(caption: post.title,
+                                              username: "@tkgka",
+                                              audioTrackName: "test_song",
+                                              VideoFileName: "video",
+                                              VideoFileFormat: "mov")
+                       
+                       self.data.append(model)
+                       
+                   }
+               }
+               
+               
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchPostdata { (posts) in
-            
-            for post in posts {
-                print("\(post.title!)\n")
-                let model = VideoModel(caption: post.title,
-                                       username: "@tkgka",
-                                       audioTrackName: "test_song",
-                                       VideoFileName: "video",
-                                       VideoFileFormat: "mov")
-                
-                self.data.append(model)
-                
-            }
-        }
-        
-        
-        
+        append()
+
         for _ in 0..<10 {
             let model = VideoModel(caption: "this is a coll car",
                                    username: "@tkgka",
@@ -49,7 +52,18 @@ class ViewController: UIViewController {
                                    VideoFileFormat: "mov")
 
             self.data.append(model)
+            
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -61,6 +75,7 @@ class ViewController: UIViewController {
         collectionView?.dataSource = self
         view.addSubview(collectionView!)
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView?.frame = view.bounds
@@ -85,6 +100,9 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: VideoCollectionViewCellDelegate {
     func didTapLikeButton(with model: VideoModel) {
+        print(model.username)
+        print(model.audioTrackName)
+        print(model.VideoFileName)
         print("likebuttonTapped")
     }
     
