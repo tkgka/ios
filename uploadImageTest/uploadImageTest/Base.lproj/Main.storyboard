@@ -41,6 +41,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LE8-aJ-hNd">
+                                <rect key="frame" x="118" y="438" width="191" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,6 +55,7 @@
                     <connections>
                         <outlet property="emailField" destination="XI2-fl-W6m" id="Mjl-Fy-vho"/>
                         <outlet property="pwField" destination="WZb-pL-JCU" id="Ch4-ru-LLt"/>
+                        <outlet property="resultLabel" destination="LE8-aJ-hNd" id="lkR-gX-tq9"/>
                         <outlet property="telField" destination="Z1o-UG-OK7" id="Kvq-iF-nAc"/>
                         <outlet property="uploadBtn" destination="Jzt-gd-bVK" id="v8U-L7-fgi"/>
                     </connections>

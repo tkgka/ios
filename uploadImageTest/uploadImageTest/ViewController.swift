@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet var pwField: UITextField!
     @IBOutlet var telField: UITextField!
     @IBOutlet var uploadBtn: UIButton!
+    @IBOutlet var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +40,11 @@ class ViewController: UIViewController {
             //통신성공
             case .success(let value):
                 print("value: \(value)")
-                
+                self.resultLabel.text = "\(value)"
             //통신실패
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
+                self.resultLabel.text = "\(error)"
             }
         }
         
