@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+
 class ViewController: UIViewController {
     
     @IBOutlet var emailField: UITextField!
@@ -15,10 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet var telField: UITextField!
     @IBOutlet var uploadBtn: UIButton!
     @IBOutlet var resultLabel: UILabel!
+    @IBOutlet var starImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
     }
 
@@ -50,9 +52,30 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func btnClicked(_ sender: UIButton) {
+    func sendImage(){
         
-        testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
+        AF.upload(multipartFormData: { multipartFormData in
+            
+            multipartFormData.append(self.starImage.image!.pngData()!, withName: "", fileName: "test.png", mimeType: "image/png")
+
+        }, to: "http://localhost:3000/image/upload")
+        .responseJSON { response in
+        print("\(response)")
+        }
+        
+        
+        
+        
+    }
+     
+
+    
+    
+    
+    
+    @IBAction func btnClicked(_ sender: UIButton) {
+        sendImage()
+        //testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
     }
 }
 

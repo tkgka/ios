@@ -48,6 +48,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="PZ9-Fx-lRc">
+                                <rect key="frame" x="93" y="461" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,6 +60,7 @@
                         <outlet property="emailField" destination="XI2-fl-W6m" id="Mjl-Fy-vho"/>
                         <outlet property="pwField" destination="WZb-pL-JCU" id="Ch4-ru-LLt"/>
                         <outlet property="resultLabel" destination="LE8-aJ-hNd" id="lkR-gX-tq9"/>
+                        <outlet property="starImage" destination="PZ9-Fx-lRc" id="vfM-Ai-VLN"/>
                         <outlet property="telField" destination="Z1o-UG-OK7" id="Kvq-iF-nAc"/>
                         <outlet property="uploadBtn" destination="Jzt-gd-bVK" id="v8U-L7-fgi"/>
                     </connections>
@@ -65,4 +70,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="star" width="886" height="886"/>
+    </resources>
 </document>
