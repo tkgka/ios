@@ -43,6 +43,8 @@ class ViewController: UIViewController {
             case .success(let value):
                 print("value: \(value)")
                 self.resultLabel.text = "\(value)"
+                self.sendImage(value: value)
+                
             //통신실패
             case .failure(let error):
                 print("error: \(String(describing: error.errorDescription))")
@@ -52,13 +54,13 @@ class ViewController: UIViewController {
         
     }
     
-    func sendImage(){
+    func sendImage(value: String){
         
         AF.upload(multipartFormData: { multipartFormData in
             
             multipartFormData.append(self.starImage.image!.pngData()!, withName: "", fileName: "test.png", mimeType: "image/png")
 
-        }, to: "http://localhost:3000/image/upload")
+        }, to: "http://localhost:3000/image/upload?id=\(value)")
         .responseJSON { response in
         print("\(response)")
         }
@@ -74,8 +76,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnClicked(_ sender: UIButton) {
-        sendImage()
-        //testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
+        //sendImage(url: emailField.text!)
+        testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
     }
 }
 
