@@ -25,7 +25,7 @@ pod 'GoogleSignIn'
 
 #socket IO
 pod 'Socket.IO-Client-Swift'
-
+pod 'Alamofire', '~>5.1'
 #cardSlider
 
 pod 'CardSlider'

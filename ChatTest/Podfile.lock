@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.2.2)
   - AppAuth (1.4.0):
     - AppAuth/Core (= 1.4.0)
     - AppAuth/ExternalUserAgent (= 1.4.0)
@@ -129,6 +130,7 @@ PODS:
   - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.1)
   - CardSlider
   - FBSDKLoginKit
   - Firebase/Auth
@@ -145,6 +147,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - AppAuth
     - CardSlider
     - FBSDKCoreKit
@@ -177,6 +180,7 @@ SPEC REPOS:
     - Starscream
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
   FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
@@ -208,6 +212,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 472eecb399cf4c8b7fa5522d8d1f623381b8920f
+PODFILE CHECKSUM: 856ac49fe561f8f20fce32856a3e8488b9ac5c16
 
 COCOAPODS: 1.9.3

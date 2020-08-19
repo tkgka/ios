@@ -33,8 +33,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="f9l-Uf-uVe" kind="relationship" relationship="viewControllers" id="19A-aW-hX7"/>
+                        <segue destination="qHp-ej-aA8" kind="relationship" relationship="viewControllers" id="hKQ-21-Ym8"/>
                         <segue destination="TO9-MG-BxA" kind="relationship" relationship="viewControllers" id="K0A-YZ-wou"/>
+                        <segue destination="f9l-Uf-uVe" kind="relationship" relationship="viewControllers" id="19A-aW-hX7"/>
                         <segue destination="Mdl-F0-adU" kind="relationship" relationship="viewControllers" id="Uif-F3-G2F"/>
                     </connections>
                 </tabBarController>
@@ -48,7 +49,7 @@
                 <navigationController id="Mdl-F0-adU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="LV8-PJ-LN2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="K4w-z2-KVT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -97,7 +98,7 @@
                     <tabBarItem key="tabBarItem" title="chats" image="message" catalog="system" id="gVK-Fp-BUs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="l2H-S7-MJ2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -113,7 +114,7 @@
         <scene sceneID="SpP-s6-5q1">
             <objects>
                 <navigationController id="f9l-Uf-uVe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="test" image="house" catalog="system" id="wlF-Le-gzg"/>
+                    <tabBarItem key="tabBarItem" title="test" image="square.and.arrow.up" catalog="system" id="wlF-Le-gzg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fnO-mS-tHZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -125,7 +126,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfI-NN-tsf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1800" y="663"/>
+            <point key="canvasLocation" x="-1864" y="663"/>
         </scene>
         <!--test-->
         <scene sceneID="RWs-bc-YQO">
@@ -147,7 +148,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YW-rF-LRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1800.0000000000002" y="1402.9017857142856"/>
+            <point key="canvasLocation" x="-1864" y="1403"/>
+        </scene>
+        <!--main-->
+        <scene sceneID="bZT-lT-1aB">
+            <objects>
+                <navigationController id="qHp-ej-aA8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="main" image="house" catalog="system" id="A4k-tj-UgZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="n9Q-Mu-sJZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tGZ-tf-RV2" kind="relationship" relationship="rootViewController" id="xwI-ET-9aM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEC-OC-d1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2788" y="663"/>
+        </scene>
+        <!--test-->
+        <scene sceneID="zl8-fL-veu">
+            <objects>
+                <viewController id="tGZ-tf-RV2" customClass="mainViewController" customModule="ChatTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kiJ-Xr-eTN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="naL-iP-OxS">
+                                <rect key="frame" x="0.0" y="148.5" width="414" height="664.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="naL-iP-OxS" firstAttribute="leading" secondItem="myw-0S-T5w" secondAttribute="leading" id="18k-KR-Gsh"/>
+                            <constraint firstItem="myw-0S-T5w" firstAttribute="bottom" secondItem="naL-iP-OxS" secondAttribute="bottom" id="2xr-m4-RQD"/>
+                            <constraint firstItem="myw-0S-T5w" firstAttribute="trailing" secondItem="naL-iP-OxS" secondAttribute="trailing" id="fck-kh-KPb"/>
+                            <constraint firstItem="naL-iP-OxS" firstAttribute="top" secondItem="myw-0S-T5w" secondAttribute="top" id="tMq-RK-B62"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="myw-0S-T5w"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="test" largeTitleDisplayMode="always" id="IwQ-bE-RDB"/>
+                    <connections>
+                        <outlet property="table" destination="naL-iP-OxS" id="IiS-Qa-9T2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-Lc-C7M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2788" y="1403"/>
         </scene>
     </scenes>
     <resources>
@@ -155,5 +205,6 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
