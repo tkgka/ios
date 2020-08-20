@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var button: UIButton!
     let picker = UIImagePickerController()
     
@@ -40,9 +41,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
          
             }
     
-    
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            picker.dismiss(animated: true, completion: nil)
+                    imageView.image = image
+                    
+                }
 
+    }
+        
+            
             func openLibrary(){
          
               picker.sourceType = .photoLibrary

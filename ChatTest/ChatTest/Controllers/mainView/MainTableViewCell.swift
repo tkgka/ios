@@ -9,7 +9,7 @@
 import UIKit
 class MainTableViewCell: UITableViewCell {
     @IBOutlet var PostImageView: UIImageView!
-    @IBOutlet var TextView: UITextView!
+    @IBOutlet var TextView: UILabel!
     
     static let identifier = "MainTableViewCell"
     static func nib() -> UINib {

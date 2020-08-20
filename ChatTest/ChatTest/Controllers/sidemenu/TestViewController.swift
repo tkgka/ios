@@ -10,13 +10,18 @@ import UIKit
 import SideMenu
 import FirebaseAuth
 
-class TestViewController:UIViewController,menuControllerDelegate{
+class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     private var SideMenu: SideMenuNavigationController?
     
+    @IBOutlet var imageview: UIImageView!
+    @IBOutlet var button: UIButton!
+    let picker = UIImagePickerController()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        picker.delegate = self
+        //sidebar
         let menu = menuController(with: ["home","info","setting","Logout"])
         
         menu.delegate = self
@@ -30,7 +35,50 @@ class TestViewController:UIViewController,menuControllerDelegate{
         // Do any additional setup after loading the view.
         
     }
+
+    @IBAction func galleryShow(_ sender: Any) {
     
+        let alert =  UIAlertController(title: "프로필 사진 변경", message: "", preferredStyle: .actionSheet)
+         
+         
+                let library =  UIAlertAction(title: "사진앨범", style: .default) { [weak self](action) in
+                    guard let strongself = self else{
+                        return
+                    }
+                    strongself.openLibrary()
+         
+                }
+         
+         
+                let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+         
+         
+                alert.addAction(library)
+         
+         
+                alert.addAction(cancel)
+         
+                present(alert, animated: true, completion: nil)
+         
+            }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            picker.dismiss(animated: true, completion: nil)
+                    imageview.image = image
+                    
+                }
+
+    }
+        
+            
+            func openLibrary(){
+         
+              picker.sourceType = .photoLibrary
+         
+              present(picker, animated: false, completion: nil)
+            }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

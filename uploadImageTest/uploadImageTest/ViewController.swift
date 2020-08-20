@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             multipartFormData.append(self.starImage.image!.pngData()!, withName: "", fileName: "test.png", mimeType: "image/png")
 
         }, to: "http://localhost:3000/image/upload?id=\(value)")
-        .responseJSON { response in
+        .responseJSON { response in 
         print("\(response)")
         }
         

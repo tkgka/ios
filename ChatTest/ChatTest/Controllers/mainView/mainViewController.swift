@@ -52,6 +52,8 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         table.refreshControl = UIRefreshControl()
         table.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
     }
+    
+    
     @objc private func didPullToRefresh() {
            //refecth data
            
@@ -114,7 +116,7 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.size.width
+        return 200
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -126,9 +128,9 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         let url = URL(string: "http://localhost:3000")!
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            
-            guard let data = data else { return }
+        let task = URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
+            guard let strongself = self,
+            let data = data else { return }
             
             do {
                 

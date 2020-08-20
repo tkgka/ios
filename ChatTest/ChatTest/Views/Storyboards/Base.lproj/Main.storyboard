@@ -34,8 +34,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="qHp-ej-aA8" kind="relationship" relationship="viewControllers" id="hKQ-21-Ym8"/>
-                        <segue destination="TO9-MG-BxA" kind="relationship" relationship="viewControllers" id="K0A-YZ-wou"/>
                         <segue destination="f9l-Uf-uVe" kind="relationship" relationship="viewControllers" id="19A-aW-hX7"/>
+                        <segue destination="TO9-MG-BxA" kind="relationship" relationship="viewControllers" id="K0A-YZ-wou"/>
                         <segue destination="Mdl-F0-adU" kind="relationship" relationship="viewControllers" id="Uif-F3-G2F"/>
                     </connections>
                 </tabBarController>
@@ -49,7 +49,7 @@
                 <navigationController id="Mdl-F0-adU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="LV8-PJ-LN2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="K4w-z2-KVT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -98,7 +98,7 @@
                     <tabBarItem key="tabBarItem" title="chats" image="message" catalog="system" id="gVK-Fp-BUs"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="l2H-S7-MJ2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -135,6 +135,20 @@
                     <view key="view" contentMode="scaleToFill" id="0i0-Kx-moe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iI7-tz-Bor">
+                                <rect key="frame" x="87" y="208" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji6-uT-twK">
+                                <rect key="frame" x="157" y="452" width="101" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="galleryShow:" destination="IPO-gl-8NV" eventType="touchUpInside" id="odW-id-uIO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6tF-qf-6js"/>
                     </view>
@@ -145,10 +159,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="button" destination="Ji6-uT-twK" id="noL-mt-d5h"/>
+                        <outlet property="imageview" destination="iI7-tz-Bor" id="r9B-fc-XNN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YW-rF-LRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1864" y="1403"/>
+            <point key="canvasLocation" x="-1865.217391304348" y="1402.9017857142856"/>
         </scene>
         <!--main-->
         <scene sceneID="bZT-lT-1aB">
@@ -157,7 +175,7 @@
                     <tabBarItem key="tabBarItem" title="main" image="house" catalog="system" id="A4k-tj-UgZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="n9Q-Mu-sJZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -176,8 +194,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="naL-iP-OxS">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="664.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="naL-iP-OxS">
+                                <rect key="frame" x="0.0" y="139" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -190,7 +208,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="myw-0S-T5w"/>
                     </view>
-                    <navigationItem key="navigationItem" title="test" largeTitleDisplayMode="always" id="IwQ-bE-RDB"/>
+                    <navigationItem key="navigationItem" title="test" largeTitleDisplayMode="never" id="IwQ-bE-RDB">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="vzh-CX-jWS">
+                            <connections>
+                                <action selector="sidebarBtnTapped:" destination="tGZ-tf-RV2" id="k2v-vJ-UFv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="naL-iP-OxS" id="IiS-Qa-9T2"/>
                     </connections>
