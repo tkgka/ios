@@ -10,6 +10,7 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
     @IBOutlet var PostImageView: UIImageView!
     @IBOutlet var TextView: UILabel!
+    @IBOutlet var likeBtn: UIButton!
     
     static let identifier = "MainTableViewCell"
     static func nib() -> UINib {
@@ -26,6 +27,11 @@ class MainTableViewCell: UITableViewCell {
     func configure(with model: InstagramPost){
         self.PostImageView.load(urlString: model.postImageName)
         self.TextView.text = model.TextViewName
+        
+    }
+    @IBAction func likeBtnTapped(_ sender: Any) {
+        guard let text = TextView.text else {return}
+        print(text)
         
     }
 }

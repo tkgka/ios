@@ -116,7 +116,8 @@ class VideoCollectionViewCell: UICollectionViewCell {
     }
     
     @objc private func didtapLikeButton() {
-        guard let model = model else { return }
+        //guard let model = model else { return }
+        guard let model = model else {return}
         delegate?.didTapLikeButton(with: model)
     }
     

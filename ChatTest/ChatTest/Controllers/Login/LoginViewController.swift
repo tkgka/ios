@@ -207,7 +207,7 @@ class LoginViewController: UIViewController {
                             return
                     }
                     UserDefaults.standard.set("\(firstName) \(lastName)", forKey: "name")
-                case .failure(let error):
+                case .failure( _):
                     print("failed to read data")
                 }
             })

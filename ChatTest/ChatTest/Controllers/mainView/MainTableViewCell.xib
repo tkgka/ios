@@ -30,6 +30,16 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwg-5y-nOh">
+                        <rect key="frame" x="197" y="95" width="24" height="22"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button" image="heart" catalog="system">
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                        </state>
+                        <connections>
+                            <action selector="likeBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jy9-vw-3dd"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="MMe-tl-aug" secondAttribute="bottom" constant="20" id="2RJ-PW-C75"/>
@@ -42,8 +52,12 @@
             <connections>
                 <outlet property="PostImageView" destination="MMe-tl-aug" id="KgZ-Dj-reV"/>
                 <outlet property="TextView" destination="bre-k3-2IU" id="OU3-uo-wUO"/>
+                <outlet property="likeBtn" destination="bwg-5y-nOh" id="Boc-NW-47x"/>
             </connections>
             <point key="canvasLocation" x="-1099.2753623188407" y="124.55357142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
 </document>

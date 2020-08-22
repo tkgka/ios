@@ -130,10 +130,10 @@ class ChatViewController: MessagesViewController {
         actionSheet.addAction(UIAlertAction(title: "photo", style: .default, handler: {[weak self] _ in
             self?.presentPhotoInputActionSheet()
         }))
-        actionSheet.addAction(UIAlertAction(title: "video", style: .default, handler: {[weak self] _ in
+        actionSheet.addAction(UIAlertAction(title: "video", style: .default, handler: { _ in
             
         }))
-        actionSheet.addAction(UIAlertAction(title: "Audio", style: .default, handler: {[weak self] _ in
+        actionSheet.addAction(UIAlertAction(title: "Audio", style: .default, handler: { _ in
             
         }))
         actionSheet.addAction(UIAlertAction(title: "cancel", style: .default, handler: nil))
@@ -179,7 +179,7 @@ class ChatViewController: MessagesViewController {
                     
                 }
                 
-            case .failure(let error):
+            case .failure( _):
                 print("fail to get message")
             }
         })
@@ -241,7 +241,7 @@ extension ChatViewController : UIImagePickerControllerDelegate, UINavigationCont
                     
                 })
                 
-            case .failure(let error):
+            case .failure( _):
                 print("message photo upload error")
             }
         })

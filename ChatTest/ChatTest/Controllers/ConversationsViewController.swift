@@ -78,7 +78,7 @@ class ConversationsViewController: UIViewController{
                     self?.tableView.reloadData()
                 }
                 
-            case .failure(let error):
+            case .failure( _):
                 print("failed")
                 
             }
