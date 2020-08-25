@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/gimsuhwan/Documents/GitHub/ios/ChatTest/ChatTest/Controllers/mainView/SettingViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:ChatTest.xcodeproj">
    </FileRef>
    <FileRef

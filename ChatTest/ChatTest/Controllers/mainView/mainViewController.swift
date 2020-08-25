@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-
+import SideMenu
+import FirebaseAuth
 struct APIResponse: Codable {
     let results: APIResponseResults
     let status: String
@@ -29,7 +29,33 @@ struct APIResponseResults: Codable {
     
 }
 
-class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource, MenuControllerDelegate {
+    
+    //sidemenu
+    private var sideMenu: SideMenuNavigationController?
+    private let settingsController = SettingsViewController()
+    private let infoController = InfoViewController()
+    func didSelectMenuItem(named: SideMenuItem) {
+        sideMenu?.dismiss(animated: true, completion: nil)
+
+        title = named.rawValue
+        switch named {
+        case .home:
+            settingsController.view.isHidden = true
+            infoController.view.isHidden = true
+
+        case .info:
+            settingsController.view.isHidden = true
+            infoController.view.isHidden = false
+
+        case .settings:
+            settingsController.view.isHidden = false
+            infoController.view.isHidden = true
+        }
+    }
+    //--
+    
+    
     @IBOutlet var table: UITableView!
     var models = [InstagramPost]()
     
@@ -43,11 +69,47 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             }
         }
     }
+
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            validateAuth()
+        }
+        private func validateAuth(){
+    //        let isLoggedIn = UserDefaults.standard.bool(forKey: "logged_in")
+         
+            
+            if FirebaseAuth.Auth.auth().currentUser == nil{
+                let vc = LoginViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                nav.modalPresentationStyle = .fullScreen
+                present(nav,animated: false)
+            }
+        }
+    
+    
+    
     
     override func viewDidLoad() {
        append()
         
         super.viewDidLoad()
+        
+        //sidemenu
+        let menu = MenuController(with: SideMenuItem.allCases)
+
+               menu.delegate = self
+
+               sideMenu = SideMenuNavigationController(rootViewController: menu)
+               sideMenu?.leftSide = true
+
+               SideMenuManager.default.leftMenuNavigationController = sideMenu
+               SideMenuManager.default.addPanGestureToPresent(toView: view)
+
+               addChildControllers()
+        //--
+        
         table.register(MainTableViewCell.nib(), forCellReuseIdentifier: MainTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
@@ -56,6 +118,22 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         table.refreshControl?.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
     }
     
+    private func addChildControllers() {
+           addChild(settingsController)
+           addChild(infoController)
+
+           view.addSubview(settingsController.view)
+           view.addSubview(infoController.view)
+
+           settingsController.view.frame = view.bounds
+           infoController.view.frame = view.bounds
+
+           settingsController.didMove(toParent: self)
+           infoController.didMove(toParent: self)
+
+           settingsController.view.isHidden = true
+           infoController.view.isHidden = true
+       }
     
     @objc private func didPullToRefresh() {
            //refecth data
@@ -149,6 +227,9 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         }.resume()
     }
     
+    @IBAction func didtapMenuBtn(_ sender: Any) {
+        present(sideMenu!, animated: true)
+    }
     
 }
 struct InstagramPost {

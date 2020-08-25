@@ -208,7 +208,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="myw-0S-T5w"/>
                     </view>
-                    <navigationItem key="navigationItem" title="test" largeTitleDisplayMode="never" id="IwQ-bE-RDB"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="test" largeTitleDisplayMode="never" id="IwQ-bE-RDB">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="3I9-Ky-5Uo">
+                            <connections>
+                                <action selector="didtapMenuBtn:" destination="tGZ-tf-RV2" id="EGF-Gc-taZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="table" destination="naL-iP-OxS" id="IiS-Qa-9T2"/>
                     </connections>

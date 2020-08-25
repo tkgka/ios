@@ -32,6 +32,8 @@
 		F970D99224D17B9B000B929D /* ConversationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F970D99124D17B9B000B929D /* ConversationTableViewCell.swift */; };
 		F988A35924CAD1CE00540009 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35824CAD1CE00540009 /* DatabaseManager.swift */; };
 		F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988A35C24CB37FF00540009 /* TestViewController.swift */; };
+		F992ABA624F48E2D00D48AFE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F992ABA524F48E2D00D48AFE /* InfoViewController.swift */; };
+		F992ABA824F48E3C00D48AFE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F992ABA724F48E3C00D48AFE /* SettingViewController.swift */; };
 		F9B162D824CAC783009E8E85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */; };
 		F9E681C424D5D464001544B4 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E681C324D5D464001544B4 /* SideMenu.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		F970D99124D17B9B000B929D /* ConversationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTableViewCell.swift; sourceTree = "<group>"; };
 		F988A35824CAD1CE00540009 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		F988A35C24CB37FF00540009 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F992ABA524F48E2D00D48AFE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F992ABA724F48E3C00D48AFE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = /Users/gimsuhwan/Documents/GitHub/ios/ChatTest/ChatTest/Controllers/mainView/SettingViewController.swift; sourceTree = "<absolute>"; };
 		F9B162D724CAC783009E8E85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F9E681C324D5D464001544B4 /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenu.swift; path = "../../../../../../../Downloads/Swifty-Side-Menu-master/MySideMenu/SideMenu.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,8 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				F90C5CC924C829F100516A22 /* ConversationsViewController.swift */,
-				F9016B8B24CC41DC00EE0B98 /* sidemenu */,
 				F932D65F24C96AC0007982D6 /* Login */,
+				F9016B8B24CC41DC00EE0B98 /* sidemenu */,
 				F90C5CE324C82DCD00516A22 /* PhotoViewerViewController.swift */,
 				F90C5CE524C82DE400516A22 /* VideoPlayerViewController.swift */,
 				F90C5CE724C82E0300516A22 /* NewConversationViewController.swift */,
@@ -215,6 +219,8 @@
 		F93EFCEF24EC110100266D41 /* mainView */ = {
 			isa = PBXGroup;
 			children = (
+				F992ABA524F48E2D00D48AFE /* InfoViewController.swift */,
+				F992ABA724F48E3C00D48AFE /* SettingViewController.swift */,
 				F93EFCE924EC0FD200266D41 /* MainTableViewCell.swift */,
 				F93EFCEA24EC0FD200266D41 /* MainTableViewCell.xib */,
 				F93EFCED24EC105600266D41 /* mainViewController.swift */,
@@ -370,11 +376,13 @@
 				F932D66124C96F5B007982D6 /* Extensions.swift in Sources */,
 				F93EFCEB24EC0FD200266D41 /* MainTableViewCell.swift in Sources */,
 				F90C5CC624C829F100516A22 /* AppDelegate.swift in Sources */,
+				F992ABA624F48E2D00D48AFE /* InfoViewController.swift in Sources */,
 				F90C5CEA24C82E1900516A22 /* ProfileViewController.swift in Sources */,
 				F93EFCEE24EC105600266D41 /* mainViewController.swift in Sources */,
 				F92B469E24CD54D8002CF88F /* ChatViewController.swift in Sources */,
 				F970D99224D17B9B000B929D /* ConversationTableViewCell.swift in Sources */,
 				F90C5CC824C829F100516A22 /* SceneDelegate.swift in Sources */,
+				F992ABA824F48E3C00D48AFE /* SettingViewController.swift in Sources */,
 				F92B46A424CD7358002CF88F /* StorageManager.swift in Sources */,
 				F988A35D24CB37FF00540009 /* TestViewController.swift in Sources */,
 				F90C5CE424C82DCD00516A22 /* PhotoViewerViewController.swift in Sources */,

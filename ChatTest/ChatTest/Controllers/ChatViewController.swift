@@ -267,7 +267,7 @@ extension ChatViewController: InputBarAccessoryViewDelegate{
                               sentDate: Date(),
                               kind: .text(text))
         
-        
+        messageInputBar.inputTextView.text = ""
         if isNewConversation{
             
             //????????????????????????
