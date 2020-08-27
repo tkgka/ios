@@ -148,6 +148,14 @@
                                     <action selector="galleryShow:" destination="IPO-gl-8NV" eventType="touchUpInside" id="odW-id-uIO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laW-MW-KgE">
+                                <rect key="frame" x="190" y="588" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="send"/>
+                                <connections>
+                                    <action selector="sendBtnClicked:" destination="IPO-gl-8NV" eventType="touchUpInside" id="VDp-2a-y9G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6tF-qf-6js"/>
@@ -162,6 +170,7 @@
                     <connections>
                         <outlet property="button" destination="Ji6-uT-twK" id="noL-mt-d5h"/>
                         <outlet property="imageview" destination="iI7-tz-Bor" id="r9B-fc-XNN"/>
+                        <outlet property="sendBtn" destination="laW-MW-KgE" id="QeC-Xb-N0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3YW-rF-LRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

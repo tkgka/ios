@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate {
         return true
         
     }
+    
     func application(
         _ app: UIApplication,
         open url: URL,

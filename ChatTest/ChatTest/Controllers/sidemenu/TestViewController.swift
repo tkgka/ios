@@ -9,12 +9,13 @@
 import UIKit
 import SideMenu
 import FirebaseAuth
-
+import Alamofire
 class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerControllerDelegate & UINavigationControllerDelegate{
     private var SideMenu: SideMenuNavigationController?
     
     @IBOutlet var imageview: UIImageView!
     @IBOutlet var button: UIButton!
+    @IBOutlet var sendBtn: UIButton!
     let picker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -142,5 +143,24 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
         })
     }
     
+    func sendImage(){
+        
+        AF.upload(multipartFormData: { multipartFormData in
+            
+            multipartFormData.append(self.imageview.image!.pngData()!, withName: "", fileName: "test.png", mimeType: "image/png")
+
+        }, to: "http://localhost:3000/image/upload")
+        .responseJSON { response in
+        print("\(response)")
+        }
+        
+        
+        
+        
+    }
+    
+    @IBAction func sendBtnClicked(_ sender: Any) {
+        sendImage()
+    }
 }
 
