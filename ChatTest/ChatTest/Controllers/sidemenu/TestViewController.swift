@@ -159,8 +159,16 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
         
     }
     
+    func alertSendSuccess() {
+           let alert = UIAlertController(title: "success", message: "success to send image", preferredStyle: .alert)
+           alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+           present(alert, animated: true)
+       }
+    
     @IBAction func sendBtnClicked(_ sender: Any) {
         sendImage()
+        imageview.image = nil
+        alertSendSuccess()
     }
 }
 
