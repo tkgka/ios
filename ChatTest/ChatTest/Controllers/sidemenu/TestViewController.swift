@@ -152,6 +152,7 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
         }, to: "http://localhost:3000/image/upload")
         .responseJSON { response in
         print("\(response)")
+            self.alertSendSuccess()
         }
         
         
@@ -166,9 +167,9 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
        }
     
     @IBAction func sendBtnClicked(_ sender: Any) {
-        sendImage()
+        if imageview.image != nil{sendImage()}
         imageview.image = nil
-        alertSendSuccess()
+        
     }
 }
 

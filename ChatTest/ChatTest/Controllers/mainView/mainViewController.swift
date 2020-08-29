@@ -65,7 +65,7 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 return
             }
             for post in posts {
-                strongself.models.append(InstagramPost(TextViewName: post.pw, postImageName: "http://localhost:3000/images/1597672784648364be8860e8d72b4358b5e88099a935a.png"))
+                strongself.models.append(InstagramPost(TextViewName: post.pw, postImageName: "http://localhost:3000/images/1598572905505364be8860e8d72b4358b5e88099a935a.png"))
             }
         }
     }
