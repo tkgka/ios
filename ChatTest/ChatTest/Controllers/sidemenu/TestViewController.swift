@@ -105,7 +105,7 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
     func DidSelectMenuItem(name: String) {
         SideMenu?.dismiss(animated: true, completion: {[weak self] in
             if name == "Logout"{
-                let actionSheet = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+                let actionSheet = UIAlertController(title: "로그아웃", message: "", preferredStyle: .actionSheet)
                 actionSheet.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: {[weak self] _ in
                     
                     guard let StrongSelf = self else{
