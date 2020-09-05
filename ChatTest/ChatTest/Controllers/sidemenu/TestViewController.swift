@@ -166,6 +166,7 @@ class TestViewController:UIViewController,menuControllerDelegate, UIImagePickerC
            present(alert, animated: true)
        }
     
+    
     @IBAction func sendBtnClicked(_ sender: Any) {
         if imageview.image != nil{sendImage()}
         imageview.image = nil
