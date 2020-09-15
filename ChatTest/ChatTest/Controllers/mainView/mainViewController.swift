@@ -169,7 +169,7 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             guard let final = result else {
                 return
             }
-            strongself.models.append(InstagramPost(TextViewName: final.results.sunrise, postImageName: "http://localhost:3000/images/1597672784648364be8860e8d72b4358b5e88099a935a.png"))
+            strongself.models.append(InstagramPost(TextViewName: final.results.sunrise, postImageName: "http://localhost:3000/images/1598572964310364be8860e8d72b4358b5e88099a935a.png"))
             //              strongself.models.append("Sunrise: \(final.results.sunrise)")
             
             
@@ -210,8 +210,7 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         let url = URL(string: "http://localhost:3000")!
         
         let task = URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
-            guard let strongself = self,
-            let data = data else { return }
+            guard let data = data else { return }
             
             do {
                 
