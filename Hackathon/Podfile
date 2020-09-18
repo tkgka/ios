@@ -1,0 +1,36 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Hackathon' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Hackathon
+
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'Firebase/Storage'
+pod 'SideMenu'
+
+# Facebook
+pod 'FBSDKLoginKit'
+
+pod 'MessageKit'
+pod 'JGProgressHUD'
+pod 'RealmSwift'
+pod 'SDWebImage'
+
+# Google Sign IN
+
+pod 'GoogleSignIn'
+
+#socket IO
+pod 'Socket.IO-Client-Swift'
+pod 'Alamofire', '~>5.1'
+#cardSlider
+
+pod 'CardSlider'
+
+
+end
