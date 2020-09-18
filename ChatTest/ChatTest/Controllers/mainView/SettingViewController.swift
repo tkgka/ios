@@ -1,5 +1,5 @@
 //
-//  SettingsViewController.swift
+//  InfoViewController.swift
 //  MySideMenu
 //
 //  Created by Afraz Siddiqui on 7/2/20.
@@ -12,6 +12,9 @@ class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = .blue
     }
+    
+
 }
