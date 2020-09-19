@@ -14,10 +14,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-fc-lBw">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3hW-fc-lBw" secondAttribute="trailing" id="65Y-6J-FcL"/>
+                            <constraint firstItem="3hW-fc-lBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SZ2-bV-22c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3hW-fc-lBw" secondAttribute="bottom" id="dDF-T4-Avg"/>
+                            <constraint firstItem="3hW-fc-lBw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="r2C-U1-R5J"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="nCp-md-ude"/>
+                    <navigationItem key="navigationItem" title="Profile" id="nCp-md-ude">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="message" catalog="system" id="cpq-P6-GsN">
+                            <connections>
+                                <action selector="chatBtnClicked:" destination="BYZ-38-t0r" id="kZh-qi-VOv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="3hW-fc-lBw" id="t1j-Lk-giL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,6 +98,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3" catalog="system" id="W00-wj-lPy">
                             <connections>
                                 <action selector="didTapMenuButton" destination="toY-nJ-hZo" id="Eki-Mx-HqU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="message" catalog="system" id="yue-Cw-a3r">
+                            <connections>
+                                <action selector="ChatBtnTapped:" destination="toY-nJ-hZo" id="MVa-ZH-Rs7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -143,6 +169,7 @@
     <resources>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
