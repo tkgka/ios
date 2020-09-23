@@ -15,19 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         fetchPostdata { (posts) in
-            
             for post in posts {
-                print("\(post.title!)\n")
-                print("\(post.body!)\n")
+                print("\(post)\n")
             }
         }
+        
     }
 
 
     //patch data from internet
     func fetchPostdata(completionHandler: @escaping ([Post]) -> Void){
         
-        let url = URL(string: "http://localhost:3000")!
+        let url = URL(string: "http://3.136.17.152:3000")!
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
@@ -46,5 +45,7 @@ class ViewController: UIViewController {
             
         }.resume()
     }
+    
+    
 }
 

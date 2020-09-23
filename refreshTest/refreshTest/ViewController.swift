@@ -69,7 +69,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             print("fetching data")
         }
         
-        guard let url = URL(string: "https://api.sunrise-sunset.org/json?data=2020-8-1&lng=37.3230&lat=-122.0322&formatted=0") else {
+        guard let url = URL(string: "https://a'pi.sunrise-sunset.org/json?data=2020-8-1&lng=37.3230&lat=-122.0322&formatted=0") else {
             return
         }
         let task = URLSession.shared.dataTask(with: url,completionHandler: {[weak self] data, _, error in

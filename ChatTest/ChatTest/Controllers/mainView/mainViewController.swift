@@ -65,7 +65,10 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 return
             }
             for post in posts {
-                strongself.models.append(InstagramPost(TextViewName: post.pw, postImageName: "http://localhost:3000/images/1598572905505364be8860e8d72b4358b5e88099a935a.png"))
+                print("postData : \(post.title)\n")
+                let image = "http://3.136.17.152:3000/images/\(post.link!)"
+                print(image)
+                strongself.models.append(InstagramPost(TextViewName: post.title, postImageName: image))
             }
         }
     }
@@ -169,7 +172,7 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             guard let final = result else {
                 return
             }
-            strongself.models.append(InstagramPost(TextViewName: final.results.sunrise, postImageName: "http://localhost:3000/images/1598572964310364be8860e8d72b4358b5e88099a935a.png"))
+            strongself.models.append(InstagramPost(TextViewName: final.results.sunrise, postImageName: "http://3.136.17.152:3000/images/1598572964310364be8860e8d72b4358b5e88099a935a.png"))
             //              strongself.models.append("Sunrise: \(final.results.sunrise)")
             
             
@@ -204,12 +207,12 @@ class mainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
     }
     
-    
     func fetchPostdata(completionHandler: @escaping ([Post]) -> Void){
         
-        let url = URL(string: "http://localhost:3000")!
+        let url = URL(string: "http://3.136.17.152:3000")!
         
-        let task = URLSession.shared.dataTask(with: url) { [weak self](data, response, error) in
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
             guard let data = data else { return }
             
             do {
@@ -236,7 +239,14 @@ struct InstagramPost {
     let postImageName: String
 }
 struct Post: Codable {
- 
+    var num: Int!
     var id: String!
-    var pw: String!
+    var title: String!
+    var contents: String!
+    var recruit:String
+    var link: String!
+    var tag: String!
+    var boards: String!
+    var dates: String!
+    var heart: String!
 }

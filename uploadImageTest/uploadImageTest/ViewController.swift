@@ -64,10 +64,6 @@ class ViewController: UIViewController {
         .responseJSON { response in 
         print("\(response)")
         }
-        
-        
-        
-        
     }
      
 
@@ -76,8 +72,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnClicked(_ sender: UIButton) {
-        //sendImage(url: emailField.text!)
-        testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
+        sendImage(value: "string")
+        //testJson(email: emailField.text!, pw: pwField.text!, tel: telField.text!)
     }
 }
 

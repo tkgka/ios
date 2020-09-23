@@ -17,7 +17,14 @@ import Foundation
 //}
 
 struct Post: Codable {
- 
+    var num: Int!
+    var id: String!
     var title: String!
-    var body: String!
+    var contents: String!
+    var recruit:String
+    var link: String!
+    var tag: String!
+    var boards: String!
+    var dates: String!
+    var heart: String!
 }
