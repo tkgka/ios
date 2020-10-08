@@ -711,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Elk-4g-zjh">
-                                <rect key="frame" x="409" y="20" width="51" height="51"/>
+                                <rect key="frame" x="215" y="199" width="51" height="51"/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="image" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="OwO-Jr-MxP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
